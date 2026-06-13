@@ -12,7 +12,7 @@ def hello_world():
 @app.route('/')
 def home():
     print(url_for('static', filename='iconlight.ico'))
-    return render_template('forum.html')
+    return render_template('index.html')
 
 
 @app.route('/<string:page_name>')
@@ -35,7 +35,7 @@ def fsubmitt():
         fdata = request.form.to_dict()
         print(fdata)
         fwriter(fdata)
-    return render_template('/index.html')
+    return render_template('/world.html')
 
 
 def fwriter(data):
