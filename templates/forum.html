@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achal's Python Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/forum-styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero-card">
+      <p class="eyebrow">Sober forum</p>
+      <h1>Achal's - Projects link below Board</h1>
+      <p class="lede">
+        A calm place for notes, updates, and thoughtful discussion.
+      </p>
+    </header>
+
+    <main class="layout-grid">
+      <aside class="panel sidebar">
+        <h2>Forum topics</h2>
+        <ul class="topic-list">
+          <li class="topic-chip active">Recruiters submit your details</li>
+          <li class="topic-chip">Design reviews</li>
+          <li class="topic-chip">Weekly updates</li>
+          <li class="topic-chip">Archive</li>
+        </ul>
+
+        <section class="mini-card">
+          <h3>Today</h3>
+          <p>12 active readers</p>
+          <p>4 new replies</p>
+        </section>
+      </aside>
+
+      <section class="panel content">
+        <div class="content-head">
+          <div>
+            <p class="eyebrow">Current discussion</p>
+            <h2>General notes</h2>
+          </div>
+          <button class="ghost-btn" type="button">Mark all read</button>
+        </div>
+
+        <article class="post-card">
+          <div class="post-meta">
+            <strong>Olivia</strong>
+            <span>08:15 AM</span>
+          </div>
+          <p>
+            Welcome to the board. Please keep replies concise and clear.
+          </p>
+        </article>
+
+        <article class="post-card">
+          <div class="post-meta">
+            <strong>Marcus</strong>
+            <span>09:02 AM</span>
+          </div>
+          <p>
+            The monthly summary has been added to the archive. It is available for review at any time.
+          </p>
+        </article>
+
+        <section class="composer-card">
+          <h3>Add a note</h3>
+          <form action="forum_details" method="post" class="post-form">
+            <input name="author" type="text" placeholder="Your name" required />
+            <textarea name="message" rows="4" placeholder="Write your message" required></textarea>
+            <div class="form-row">
+              <button type="submit" class="primary-btn">Publish</button>
+              <p id="status" class="status-text">New posts appear instantly here.</p>
+            </div>
+          </form>
+        </section>
+
+        <section class="reply-feed" id="reply-feed">
+          <h3>Recent replies</h3>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../static/forum-script.js"></script>
+</body>
+
+</html>
