@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Achal Garg | CV for Recruiters</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='iconlight.ico') }}">
+</head>
+
+<body>
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+
+    <header class="site-header">
+        <nav class="nav-shell">
+            <a class="brand" href="./index.html">Achal Garg</a>
+            <ul class="nav-links">
+                <li><a href="./index.html">01 : Home</a></li>
+                <li><a href="./forum.html">02 : Forum</a></li>
+                <li><a href="./world.html">03 : About me</a></li>
+                <li><a href="./contact.html">04 : Contact</a></li>
+                <li><a href="./cv.html">05 : CV / Recruiters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-page">
+        <section class="hero-card contact-card">
+            <div>
+                <p class="eyebrow">Recruiter CV page</p>
+                <h1>Achal Garg — PMP, MBA, Technical Delivery Leader</h1>
+                <p class="lead">This page now reflects the actual resume content: 13.5 years of experience across
+                    delivery leadership, SaaS programs, cloud platforms, and product strategy for global enterprises.
+                </p>
+            </div>
+
+            <div class="cv-grid">
+                <article class="form-panel">
+                    <h2>Profile snapshot</h2>
+                    <p class="note-text">Responsible, result-driven professional with high business acumen. Strong
+                        delivery manager with a bent toward technology, consulting, and product execution.</p>
+                    <ul class="note-text">
+                        <li>Technical Delivery Manager with customer-facing program ownership</li>
+                        <li>Experience in resource, cost, risk, and schedule estimation</li>
+                        <li>Certified PMP with Agile delivery, JIRA, and cloud platform exposure</li>
+                    </ul>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="../static/CV_AchalGarg_MBA_Product-2.pdf" download>Download
+                            full CV</a>
+                        <a class="btn btn-secondary" href="./contact.html">Contact me</a>
+                    </div>
+                </article>
+
+                <aside class="info-panel">
+                    <h2>Highlights</h2>
+                    <ul class="note-text cv-highlights">
+                        <li>13.5 years of experience</li>
+                        <li>Worked with Uniphore, Airtel, Whishworks, HSBC, Cybage</li>
+                        <li>Cloud, AWS, APIs, CRM, AI/LLM and product delivery experience</li>
+                        <li>MBA (IMT Ghaziabad), BE (Computer Science), PMP, Lean Six Sigma</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <section class="resume-section">
+                <article class="resume-card">
+                    <h2>Professional experience</h2>
+                    <div class="timeline-item">
+                        <h3>Uniphore Software Pvt Ltd — Technical Delivery Manager</h3>
+                        <p class="timeline-meta">May 2022 – Present</p>
+                        <p class="note-text">Delivered U-Analyze and U-Assist products for customers and internal
+                            development teams, covering on-prem and cloud deployments, feature enhancements,
+                            implementation ownership, JIRA tracking, stakeholder management, and solution consulting.
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Bharti Airtel Ltd — Technical Program Manager / Product Owner</h3>
+                        <p class="timeline-meta">Sep 2019 – Apr 2022</p>
+                        <p class="note-text">Built Airtel Experience Management (AXM) platform, collaborated across
+                            engineering, product, governance, and marketing, managed product roadmaps, migration,
+                            backlog, and AI chatbot deployment for social platforms.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Whishworks — Associate Project Manager</h3>
+                        <p class="timeline-meta">Aug 2017 – Aug 2019</p>
+                        <p class="note-text">Led integration projects with MuleSoft, managed scope, cost, invoicing,
+                            scheduling, risk, and stakeholder coordination for retail and automotive clients.</p>
+                    </div>
+                </article>
+
+                <article class="resume-card">
+                    <h2>Skills & certifications</h2>
+                    <p class="note-text"><strong>Core skills:</strong> Python, C++, AWS/GCP, Flask, FastAPI, Nginx,
+                        Tomcat, Redis, JIRA, Confluence, Agile, Waterfall, CRM integrations</p>
+                    <p class="note-text"><strong>Certifications:</strong> PMP, Lean Six Sigma Green Belt, PG-DAC from
+                        CDAC Pune</p>
+                    <div class="tag-list">
+                        <span>Project Management</span>
+                        <span>Cloud Delivery</span>
+                        <span>Product Strategy</span>
+                        <span>AI / LLM</span>
+                        <span>Stakeholder Management</span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="upload-section">
+                <div class="upload-grid">
+                    <article class="upload-card">
+                        <h2>Upload Job Description</h2>
+                        <p class="note-text">Recruiters can upload a JD file here. It will be saved in the project
+                            folder named <strong>JDs</strong> for later review.</p>
+                        <form action="/upload_jd" method="post" enctype="multipart/form-data">
+                            <label class="upload-label" for="jdFile">Choose JD file</label>
+                            <input id="jdFile" name="jd_file" type="file" accept=".pdf,.doc,.docx,.txt" required>
+                            <div class="hero-actions" style="margin-top: 0.75rem;">
+                                <button class="btn btn-primary" type="submit">Upload JD</button>
+                            </div>
+                        </form>
+                        {% if jd_message %}
+                        <p class="preview-note">{{ jd_message }}</p>
+                        {% endif %}
+                    </article>
+
+                    <article class="preview-card">
+                        <h2>What happens next</h2>
+                        <p class="note-text">The uploaded file is stored in the project’s <strong>JDs</strong> folder
+                            and can be accessed directly from the project directory.</p>
+                        <p class="note-text">This makes it easy for recruiters to share job descriptions without leaving
+                            the page.</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
