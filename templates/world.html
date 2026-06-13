@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>From Local</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Achal Garg | Submission Confirmed</title>
   <link rel="stylesheet" type="text/css" href="../static/style.css">
   <link rel="shortcut icon" href="{{ url_for('static', filename='iconlight.ico') }}">
-
 </head>
 
-<body class="">
+<body>
   <div id="site-border-left"></div>
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
-  <header>
-    <nav class="navbar  navbar-fixed-top navbar-default">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav ">
-            <li><a href="./index.html" title="">01 : Home</a></li>
-            <li><a href="./forum.html" title="">02 : Forum</a></li>
-            <li><a href="./world.html" title="">03 : About me</a></li>
-            <li><a href="./contact.html" title="">04 : Contact</a></li>
-          </ul>
-
-
-        </div>
-      </div>
+  <header class="site-header">
+    <nav class="nav-shell">
+      <a class="brand" href="./index.html">Achal Garg</a>
+      <ul class="nav-links">
+        <li><a href="./index.html">01 : Home</a></li>
+        <li><a href="./forum.html">02 : Forum</a></li>
+        <li><a href="./world.html">03 : About me</a></li>
+        <li><a href="./contact.html">04 : Contact</a></li>
+        <li><a href="./cv.html">05 : CV / Recruiters</a></li>
+      </ul>
     </nav>
   </header>
-  <h2> Form submitted</h2>
-  <h3>Navigate from above links.</h3>
-  <script src="../static/script.js"> </script>
+
+  <main class="hero-page">
+    <section class="hero-card">
+      <p class="eyebrow">Submission received</p>
+      <h1>Thanks — your form is on its way.</h1>
+      <p class="lead">This shared page now matches the rest of the site, so every result and follow-up keeps the same
+        polished look.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="./index.html">Back to home</a>
+        <a class="btn btn-secondary" href="./contact.html">Send another message</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../static/script.js"></script>
 </body>
 
 </html>
