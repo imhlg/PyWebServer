@@ -9,10 +9,10 @@ JD_FOLDER = os.path.join(os.path.dirname(__file__), 'JDs')
 os.makedirs(JD_FOLDER, exist_ok=True)
 
 
-@app.route('/world')
+@app.route('/achalgarg')
 def hello_world():
     print('hello world')
-    return 'Hello World! from Pycharm on browser and editing more, vene now'
+    return 'Hello World! Custom built website via copilot, but functionality hand made by HL'
 
 
 @app.route('/')
