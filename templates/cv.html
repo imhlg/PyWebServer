@@ -128,11 +128,21 @@
                     </article>
 
                     <article class="preview-card">
-                        <h2>What happens next</h2>
-                        <p class="note-text">The uploaded file is stored in the project’s <strong>JDs</strong> folder
-                            and can be accessed directly from the project directory.</p>
-                        <p class="note-text">This makes it easy for recruiters to share job descriptions without leaving
-                            the page.</p>
+                        <h2>Uploaded JDs</h2>
+                        <p class="note-text">Recent recruiter files saved in the project’s <strong>JDs</strong>
+                            folder are listed below for quick access.</p>
+                        {% if jd_files %}
+                        <ul class="note-text">
+                            {% for item in jd_files %}
+                            <li>
+                                <a href="/download_jd/{{ item.name }}" download>{{ item.name }}</a>
+                                <span class="timeline-meta">({{ (item.size / 1024) | round(1) }} KB)</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p class="note-text">No JD files have been uploaded yet.</p>
+                        {% endif %}
                     </article>
                 </div>
             </section>

@@ -88,9 +88,9 @@
 
         <section class="composer-card">
           <h3>Add a note</h3>
-          <form action="forum_details" method="post" class="post-form">
-            <input name="author" type="text" placeholder="Your name" required />
-            <textarea name="message" rows="4" placeholder="Write your message" required></textarea>
+          <form id="post-form" action="forum_details" method="post" class="post-form">
+            <input id="author" name="author" type="text" placeholder="Your name" required />
+            <textarea id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
             <div class="form-row">
               <button type="submit" class="primary-btn">Publish</button>
               <p id="status" class="status-text">New posts appear instantly here.</p>
