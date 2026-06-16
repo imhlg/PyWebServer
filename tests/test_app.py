@@ -25,6 +25,11 @@ class AppFeatureTests(unittest.TestCase):
             finally:
                 served.JD_FOLDER = original_folder
 
+    def test_projects_page_renders_successfully(self):
+        response = self.app.get('/projects.html')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Python projects showcase', response.data)
+
     def test_forum_posts_endpoint_returns_saved_posts(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             original_forum_file = served.FORUM_FILE
