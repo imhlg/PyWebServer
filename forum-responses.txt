@@ -7,4 +7,4 @@ gg,	25
 
 Achal,	first run
 
-Mickey, test gitignor
+Mickey, test git ignor
